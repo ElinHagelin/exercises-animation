@@ -1,0 +1,71 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: lightgrey;
+}
+
+.container {
+	height: 500px;
+	width: 500px;
+	background-color: white;
+	box-shadow: 0.5em 0.5em 0.5em #ccc, -0.5em -0.5em 0.5em #ccc;
+}
+
+.cube {
+	height: 40px;
+	width: 40px;
+	background-color: green;
+}
+
+.container:hover .cube {
+	animation: move-cube 5s;
+
+}
+
+@keyframes move-cube {
+	0% {
+		transform: translateX(0);
+	}
+
+	20% {
+		transform: translateX(460px);
+		background-color: green;
+	}
+
+	25% {
+		transform: translateX(460px);
+		background-color: red;
+	}
+
+	45% {
+		transform: translateX(460px)translateY(460px);
+		background-color: red;
+	}
+
+	50% {
+		transform: translateX(460px)translateY(460px);
+		background-color: purple;
+	}
+
+	70% {
+		transform: translateX(0)translateY(460px);
+		background-color: purple;
+	}
+
+	75% {
+		transform: translateX(0)translateY(460px);
+		background-color: yellow;
+	}
+
+	95% {
+		transform: translateX(0)translateY(0);
+		background-color: yellow;
+	}
+
+	100% {
+		transform: translateX(0)translateY(0);
+		background-color: green;
+	}
+}

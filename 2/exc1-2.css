@@ -1,0 +1,79 @@
+.squash,
+.squash2,
+.pulse {
+	height: 4em;
+	width: 7em;
+	margin: 2em;
+	border: none;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bold;
+	border-radius: 0.5em;
+	box-shadow: 0.3em 0.3em 0.6em #ccc;
+}
+
+.squash,
+.squash2 {
+	background-color: blueviolet;
+	color: rgb(220, 255, 243);
+	transition: all 0.3s;
+
+}
+
+.squash:focus {
+	height: 3em;
+	width: 8em;
+}
+
+.squash2:focus {
+	transform: scale(1.2, 0.8)
+}
+
+.pulse:hover {
+	animation: 5s pulse ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0% {
+		background-color: unset;
+	}
+
+	10% {
+		background-color: red;
+	}
+
+	20% {
+		background-color: unset;
+	}
+
+	30% {
+		background-color: blue;
+	}
+
+	40% {
+		background-color: unset;
+	}
+
+	50% {
+		background-color: lime;
+	}
+
+	60% {
+		background-color: unset;
+	}
+
+	70% {
+		background-color: yellow;
+	}
+
+	80% {
+		background-color: unset;
+	}
+
+	90% {
+		background-color: rebeccapurple;
+	}
+
+	100% {
+		background-color: unset;
+	}
+}

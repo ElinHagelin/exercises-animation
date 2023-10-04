@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stopwatch</title>
+	<link rel="stylesheet" href="stopwatch.css">
+</head>
+
+<body>
+
+	<div class="watch">
+		<div class="center"></div>
+		<div class="minute"></div>
+		<div class="second"></div>
+	</div>
+
+	<div class="buttons">
+		<button class="start">Starta</button>
+		<button class="pause">Pausa</button>
+		<button class="reset">Återställ</button>
+	</div>
+
+
+	<script>
+		const watch = document.querySelector('.watch')
+		const startButton = document.querySelector('.start')
+		const pauseButton = document.querySelector('.pause')
+		const resetButton = document.querySelector('.reset')
+		startButton.addEventListener('click', () => {
+			watch.classList.remove('paused')
+			watch.classList.add('on')
+		})
+		pauseButton.addEventListener('click', () => {
+			watch.classList.add('paused')
+		})
+		resetButton.addEventListener('click', () => {
+			watch.classList.remove('on', 'paused')
+		})
+	</script>
+
+
+</body>
+
+</html>

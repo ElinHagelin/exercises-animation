@@ -1,0 +1,86 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	position: absolute;
+	top: 10em;
+	height: 20em;
+	width: 13em;
+	transform: translateX(0);
+	transition: transform 0.5s;
+}
+
+.red {
+	background-color: red;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.lime {
+	background-color: lime;
+}
+
+.green {
+	background-color: green;
+}
+
+.turquoise {
+	background-color: turquoise;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.pink {
+	background-color: pink;
+}
+
+body:hover .pink {
+	transform: translateX(-50%)rotate(-20deg);
+}
+
+body:hover .purple {
+	transform: translateX(-40%)rotate(-15deg);
+}
+
+body:hover .blue {
+	transform: translateX(-30%)rotate(-10deg);
+}
+
+body:hover .turquoise {
+	transform: translateX(-20%)rotate(-5deg);
+}
+
+body:hover .green {
+	transform: translateX(-10%);
+}
+
+body:hover .lime {
+	transform: rotate(5deg);
+}
+
+body:hover .yellow {
+	transform: translate(10%)rotate(10deg);
+}
+
+body:hover .orange {
+	transform: translate(20%)rotate(15deg);
+}
+
+body:hover .red {
+	transform: translate(30%)rotate(20deg);
+}

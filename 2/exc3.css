@@ -1,0 +1,50 @@
+.container {
+	height: 10em;
+	display: flex;
+	border: 2px solid red
+}
+
+.item {
+	background-color: beige;
+	flex-grow: 1;
+	border: 1px solid gray;
+	transition: flex-grow 0.5s;
+}
+
+.item:hover {
+	flex-grow: 2;
+}
+
+.flex-container {
+	margin: 2em 0;
+	height: 10em;
+	display: flex;
+	background-color: rgb(104, 132, 255);
+}
+
+.flex-container>* {
+	background-color: rgb(64, 99, 255);
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	flex-grow: 1;
+	border: 2px solid blue;
+	display: grid;
+	place-items: center;
+	transition: all 0.5s ease;
+}
+
+.flex-container> :hover {
+	cursor: pointer;
+	transform: translateY(0.5em);
+}
+
+.selected {
+	background-color: rgb(131, 153, 250);
+	flex-grow: 2;
+	transform: translateY(calc(50vh - 50%));
+}
+
+.selected:hover {
+	transform: translateY(calc(50vh - 50%)) scale(115%);
+}
