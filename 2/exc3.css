@@ -1,5 +1,5 @@
 .container {
-	height: 10em;
+	height: 3em;
 	display: flex;
 	border: 2px solid red
 }
@@ -17,7 +17,7 @@
 
 .flex-container {
 	margin: 2em 0;
-	height: 10em;
+	height: 3em;
 	display: flex;
 	background-color: rgb(104, 132, 255);
 }

@@ -12,3 +12,11 @@ for (let i = 0; i < items.length; i++) {
 	})
 
 }
+
+const birdButton = document.querySelector('.bird-button').addEventListener('click', () => {
+	document.querySelector('.bird').classList.toggle('flying')
+})
+
+const menuButton = document.querySelector('.menu-button').addEventListener('click', () => {
+	document.querySelector('.menu').classList.toggle('open')
+})

@@ -1,0 +1,84 @@
+.bird {
+	height: 5em;
+	width: 7em;
+	margin-bottom: 2em;
+	background-color: darkgray;
+	clip-path: polygon(0% 99%, 25% 75%, 48% 94%, 73% 76%, 98% 98%, 73% 85%, 49% 99%, 25% 85%);
+}
+
+.bird-button {
+	background-color: aquamarine;
+}
+
+.flying {
+	animation: 1s fly ease-in;
+	transform: translate(30em, 0%)
+}
+
+@keyframes fly {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	10% {
+		transform: translate(3em, -15%)
+	}
+
+	20% {
+		transform: translate(6em, -30%)
+	}
+
+	30% {
+		transform: translate(9em, -45%)
+	}
+
+	40% {
+		transform: translate(12em, -60%)
+	}
+
+	50% {
+		transform: translate(15em, -65%)
+	}
+
+	60% {
+		transform: translate(18em, -60%)
+	}
+
+	70% {
+		transform: translate(21em, -45%)
+	}
+
+	80% {
+		transform: translate(24em, -30%)
+	}
+
+	90% {
+		transform: translate(27em, -15%)
+	}
+
+	100% {
+		transform: translate(30em, 0%)
+	}
+
+}
+
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	gap: 1em;
+	background-color: blanchedalmond;
+	border: 2px solid rgb(255, 230, 193);
+	width: 10em;
+	transition: transform 0.5s;
+	transform-origin: bottom left;
+	transform: rotate(-90deg)translateX(100%);
+}
+
+.open {
+	transform: rotate(0)translateX(0);
+}

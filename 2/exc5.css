@@ -1,0 +1,45 @@
+.move-container {
+	height: 2em;
+}
+
+.move {
+	margin-top: 2em;
+	height: 100%;
+	width: 2em;
+	background-color: rebeccapurple;
+	border-radius: 0.5em;
+	transition: all 2s;
+	position: relative;
+	left: 1em;
+}
+
+.move-container:hover .move {
+	animation: 3s moving ease-in-out forwards;
+	background-color: rgb(240, 153, 255);
+}
+
+@keyframes moving {
+	0% {
+		background-color: rebeccapurple;
+		transform: rotate(0) scaleY(1);
+		left: 1em;
+	}
+
+	25% {
+		transform: rotate(10deg) scaleY(1.2);
+	}
+
+	50% {
+		transform: rotate(0) scaleY(1.4);
+	}
+
+	75% {
+		transform: rotate(-10deg) scaleY(1.2);
+	}
+
+	100% {
+		transform: rotate(0) scaleY(1);
+		background-color: rgb(240, 153, 255);
+		left: 60em;
+	}
+}
