@@ -1,0 +1,81 @@
+body {
+	display: grid;
+	place-content: center;
+}
+
+.frame {
+	height: 10em;
+	width: 80vw;
+	padding: 5em;
+	display: flex;
+	justify-content: center;
+
+}
+
+.rectangle {
+	height: 100%;
+	width: 30vw;
+	transition: all 2s linear;
+}
+
+.left {
+	background-color: green;
+	border: 2px solid darkgreen;
+	transform-origin: right;
+	transform: rotateY(-45deg);
+
+}
+
+.right {
+	background-color: green;
+	border: 2px solid darkgreen;
+	transform-origin: left;
+	transform: rotateY(45deg);
+}
+
+.frame:hover .left {
+	transform: perspective(50em) rotateY(-45deg);
+}
+
+.frame:hover .right {
+	transform: perspective(50em) rotateY(45deg);
+}
+
+.sim-3d {
+	text-align: center;
+	max-width: fit-content;
+	padding: 2em;
+	background-color: yellow;
+	font-size: 2em;
+	transform: perspective(100px) translate3d(0, 0, 10px) rotateX(0);
+	/* animation: 5s spin infinite; */
+}
+
+
+
+@keyframes spin {
+	0% {
+		transform: perspective(100px) translate3d(0, 0, 10px) rotateX(0);
+	}
+
+	/* 
+	10% {
+		transform: perspective(100px) translateY(10px) rotateX(70deg);
+	}
+	20% {
+		transform: perspective(100px) translateY(10px) rotateX(70deg);
+	}
+	30% {
+		transform: perspective(100px) translateY(10px) rotateX(45deg);
+	}
+
+	40% {
+		transform: perspective(100px) translateY(10px) rotateX(70deg);
+	}
+	50% {
+		transform: perspective(100px) translateY(10px) rotateX(70deg);
+	} */
+	100% {
+		transform: perspective(100px) translate3d(0, 0, 15px) rotateX(45deg) rotateY(10deg) rotateZ(20deg);
+	}
+}

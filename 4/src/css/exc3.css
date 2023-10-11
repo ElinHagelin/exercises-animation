@@ -1,0 +1,21 @@
+.visible-container {
+	min-height: 10em;
+	text-align: center;
+}
+
+.visible {
+	background-color: aqua;
+	padding: 2em;
+	border-radius: 2em 0;
+	animation: 5s show;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,121 @@
+.ball-container {
+	margin: 4em 0;
+	min-height: 7em;
+	display: grid;
+}
+
+.ball {
+	display: none;
+	height: 3em;
+	width: 3em;
+	border-radius: 50%;
+	background-color: lightgreen;
+	border: 1px solid rgb(108, 197, 108);
+	box-shadow: 0.2em 0.2em 0.4em grey;
+}
+
+.rendered {
+	display: block;
+	animation: 1s bounce ease-out forwards;
+}
+
+.ball-button {
+	place-self: end center;
+
+}
+
+@keyframes bounce {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	5% {
+		transform: translate(0.3em, -0.5em);
+	}
+
+	10% {
+		transform: translate(0.6em, -1em);
+	}
+
+	15% {
+		transform: translate(0.9em, -1.5em);
+	}
+
+	20% {
+		transform: translate(1.2em, -2em);
+	}
+
+	25% {
+		transform: translate(1.5em, -2.1em);
+	}
+
+	30% {
+		transform: translate(1.7em, -2em);
+	}
+
+	35% {
+		transform: translate(2em, -1.5em);
+	}
+
+	40% {
+		transform: translate(2.3em, -1em);
+	}
+
+	45% {
+		transform: translate(2.6em, -0.5em);
+	}
+
+	50% {
+		transform: translate(2.9em, 0);
+	}
+
+	51% {
+		height: 2.8em;
+		width: 3.2em;
+	}
+
+	52% {
+		height: 3em;
+		width: 3em;
+	}
+
+	55% {
+		transform: translate(3.2em, -0.5em);
+	}
+
+	60% {
+		transform: translate(3.5em, -1em);
+	}
+
+	65% {
+		transform: translate(3.7em, -0.8em);
+	}
+
+	70% {
+		transform: translate(3.9em, -0.3em);
+	}
+
+	75% {
+		transform: translate(4.1em, 0em);
+	}
+
+	80% {
+		transform: translate(4.3em, -0.3em);
+	}
+
+	85% {
+		transform: translate(4.4em, -0.1em);
+	}
+
+	90% {
+		transform: translate(4.5em, 0);
+	}
+
+	95% {
+		transform: translate(4.8em, 0);
+	}
+
+	100% {
+		transform: translate(5em, 0);
+	}
+}

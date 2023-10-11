@@ -1,0 +1,31 @@
+.toggle-door {
+	background: none;
+	border: none;
+}
+
+.door {
+	background-color: rgb(138, 71, 32);
+	border: 2px solid rgb(97, 50, 23);
+	display: inline-flex;
+	align-items: center;
+	transform-origin: right;
+	transition: all 1s;
+	height: 10em;
+	width: 5em;
+}
+
+.handle {
+	height: 30px;
+	width: 30px;
+	opacity: 1;
+	transition: opacity 0.1s linear 0.2s;
+}
+
+
+.toggle-door:focus .door {
+	transform: rotateY(180deg);
+}
+
+.toggle-door:focus .handle {
+	opacity: 0;
+}

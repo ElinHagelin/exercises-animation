@@ -1,0 +1,102 @@
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-content: center;
+}
+
+.card {
+	background-color: aqua;
+	height: 20em;
+	width: 13em;
+	transform-origin: bottom center;
+	transform: rotateX(90deg) rotateY(0);
+}
+
+body:hover .card {
+	animation: 6s spin linear forwards;
+}
+
+@keyframes spin {
+	0% {
+		transform: perspective(10em) rotateX(90deg) rotateY(0);
+		background-color: aqua;
+		transform-origin: bottom center;
+	}
+
+	10% {
+		transform: perspective(20em) rotateX(0) rotateY(0);
+		background-color: aqua;
+		transform-origin: bottom center;
+	}
+
+	20% {
+		transform: perspective(20em) rotateX(0) rotateY(45deg);
+		background-color: aqua;
+		transform-origin: center;
+	}
+
+	30% {
+		transform: perspective(20em) rotateX(0) rotateY(90);
+		background-color: aqua;
+		transform-origin: center;
+	}
+
+	31% {
+		transform: perspective(20em) rotateX(0) rotateY(90);
+		background-color: orange;
+		transform-origin: center;
+	}
+
+	40% {
+		transform: perspective(20em) rotateX(0) rotateY(135deg);
+		background-color: orange;
+		transform-origin: center;
+	}
+
+	50% {
+		transform: perspective(20em) rotateX(0) rotateY(180deg);
+		background-color: orange;
+		transform-origin: center;
+	}
+
+	60% {
+		transform: perspective(20em) rotateX(0) rotateY(225deg);
+		background-color: orange;
+		transform-origin: center;
+	}
+
+	70% {
+		transform: perspective(20em) rotateX(0) rotateY(270deg);
+		background-color: orange;
+		transform-origin: center;
+	}
+
+	71% {
+		transform: perspective(20em) rotateX(0) rotateY(270deg);
+		background-color: aqua;
+		transform-origin: center;
+	}
+
+	80% {
+		transform: perspective(20em) rotateX(0) rotateY(315deg);
+		background-color: aqua;
+		transform-origin: center;
+	}
+
+	95% {
+		transform: perspective(20em) rotateX(0) rotateY(360deg);
+		background-color: aqua;
+		transform-origin: bottom center;
+	}
+
+	100% {
+		transform: perspective(10em) rotateX(90deg) rotateY(360deg);
+		background-color: aqua;
+		transform-origin: bottom center;
+	}
+}

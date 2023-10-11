@@ -1,0 +1,16 @@
+button {
+	margin: 1em;
+}
+
+.heading {
+	background-color: rgb(238, 238, 238);
+	color: grey;
+	transition: all 0.5s;
+	max-width: max-content;
+	padding: 0.5em 1em;
+}
+
+.toggled {
+	background-color: grey;
+	color: rgb(238, 238, 238);
+}

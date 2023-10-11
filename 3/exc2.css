@@ -1,0 +1,34 @@
+.perspective-container {
+	background-color: rgb(221, 162, 255);
+	margin: 3em 5em;
+	padding: 0.3em;
+	border: 1px solid purple;
+	display: flex;
+	width: fit-content;
+	gap: 0.3em
+}
+
+.perspective-item {
+	padding: 1.5em 2em;
+	transform: rotateX(0deg);
+	transform-origin: top;
+	transition: all 1s;
+}
+
+.item-1 {
+	background-color: rgb(151, 91, 185);
+	border: 1px solid rgb(127, 56, 168);
+}
+
+.item-2 {
+	background-color: rgb(238, 188, 250);
+	border: 1px solid rgb(127, 56, 168);
+}
+
+.perspective-container:hover .item-1 {
+	transform: perspective(100em) rotateX(30deg);
+}
+
+.perspective-container:hover .item-2 {
+	transform: perspective(10em) rotateX(30deg);
+}

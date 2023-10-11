@@ -1,0 +1,69 @@
+.card-container {
+	height: 10em;
+	width: 6.5em;
+	margin: 2em 0;
+	place-self: center;
+}
+
+.card {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.card-image {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.back {
+	opacity: 0;
+}
+
+.front {
+	opacity: 1;
+}
+
+.card-container:hover {
+	animation: 1s turn forwards;
+}
+
+.card-container:hover .back {
+	animation: 0.1s make-visible 0.3s forwards;
+
+}
+
+.card-container:hover .front {
+	animation: 0.1s make-invisible 0.3s forwards;
+}
+
+@keyframes turn {
+	0% {
+		transform: rotateY(0);
+	}
+
+	100% {
+		transform: rotateY(180deg);
+	}
+}
+
+@keyframes make-invisible {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes make-visible {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

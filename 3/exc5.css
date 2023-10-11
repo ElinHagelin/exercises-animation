@@ -1,0 +1,31 @@
+.falling-container {
+	place-self: center;
+}
+
+.falling {
+	height: 3em;
+	width: 6em;
+	background-color: orange;
+	transform: perspective(5.5em) translateZ(4.2em) translateY(-3em) scale(2);
+}
+
+body:hover .falling {
+	animation: 2.5s falling ease-in forwards;
+}
+
+@keyframes falling {
+	0% {
+		transform: perspective(5.5em) translateZ(4.2em) translateY(-3em) scale(2);
+		box-shadow: 2em 2em 2em gray;
+	}
+
+	95% {
+		transform: perspective(100em) translateZ(0) translateY(0) scale(1.1);
+		box-shadow: 0.5em 0.5em 0.5em gray;
+	}
+
+	100% {
+		transform: perspective(100em) translateZ(0) translateY(0) scale(1);
+		box-shadow: none;
+	}
+}

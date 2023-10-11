@@ -1,0 +1,70 @@
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	background-color: rgb(51, 51, 51);
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate3d(-2, 5, 0, 70deg);
+	}
+
+	50% {
+		transform: rotate3d(-2, 5, 0, 70deg);
+	}
+
+	100% {
+		transform: rotate3d(-2, 5, 0, 70deg);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: perspective(100px) translate(-50%, -50%) translateZ(0) scale(1);
+	}
+
+	25% {
+		transform: perspective(100px) translate(-50%, -50%) translateZ(-1em) scale(1.2);
+	}
+
+	50% {
+		transform: perspective(100px) translate(-50%, -50%) translateZ(0) scale(1);
+	}
+
+	75% {
+		transform: perspective(100px) translate(-50%, -50%) translateZ(1em) scale(0.8);
+	}
+
+	100% {
+		transform: perspective(100px) translate(-50%, -50%) translateZ(0) scale(1);
+	}
+}
+
+.container {
+	width: 400px;
+	height: 400px;
+	// perspective: 100px;
+	transform: rotate3d(-2, 5, 0, 70deg);
+	transform-style: preserve-3d;
+	// animation: 2s rotate infinite;
+
+	@for $i from 1 through 20 {
+		div:nth-child(#{$i}) {
+			width: #{20px * $i};
+			height: #{20px * $i};
+			position: absolute;
+			border-radius: 50%;
+			border: 2px dotted rgb(219, 219, 219);
+			transform: perspective(100px) translate(-50%, -50%) scale(1);
+			top: 50%;
+			left: 50%;
+			animation: 10s pulse #{$i}s infinite ease-in-out;
+		}
+	}
+}
